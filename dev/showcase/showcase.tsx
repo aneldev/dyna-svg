@@ -1,11 +1,11 @@
 import * as React from 'react';
-import {DynaSvg} from "../../src/";
+import {DynaSvg} from "../../src/index";
 
 import {faIcon, IShowcase} from "dyna-showcase";
-import {Logo} from "./Logo";
+import {Logo} from "../scripts/Logo";
 
-const svgIcon: string = require('./assets/svg-file-format-variant.svg');
-const styles: any = require('./svgExampleStyles.module.less');
+const svgIcon: string = require('../scripts/assets/svg-file-format-variant.svg');
+const styles: any = require('../scripts/svgExampleStyles.module.less');
 
 require('./showcase.less');
 
@@ -61,7 +61,7 @@ export default {
       component: (
         <DynaSvg
           src={svgIcon}
-          width={100}
+          width={150}
           onClick={() => alert('svg clicked')}
         />
       ),

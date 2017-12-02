@@ -4,7 +4,6 @@ export interface IDynaSvgProps extends React.HTMLAttributes<HTMLDivElement> {
     className?: string;
     src: string;
     width?: number;
-    height?: number;
     [propsName: string]: any;
 }
 export declare class DynaSvg extends React.Component<IDynaSvgProps, {}> {
