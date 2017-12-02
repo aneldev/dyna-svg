@@ -5,7 +5,7 @@ Written in typescript, runs everywhere.
 
 # Demo
 
-- `npm install` (is you didn't)
+- `npm install` (if you didn't)
 - `npm start` to see the demo
 
 # Install
@@ -34,7 +34,7 @@ Imports the `svg` as dom element to style the contents of or animate them.
 ```
 		const svgIcon = require('./assets/svg-file-format-variant.svg');
 		...
-        <DynaSvg src={svgIcon} />
+		<DynaSvg src={svgIcon} />
 ```
 There is need to define the `width` otherwise the svg will have width 0, but don't worry. 
 
@@ -44,7 +44,7 @@ As here we didn't define width, as fallback the `dyna-svg-defaults` class will b
 ```
 		const svgIcon = require('./assets/svg-file-format-variant.svg');
 		...
-        <DynaSvg className="my-nice-svg" src={svgIcon} />
+		<DynaSvg className="my-nice-svg" src={svgIcon} />
 ```
 Similar your can use css modules
 
@@ -54,7 +54,7 @@ _Much better_
 ```
 		const svgIcon = require('./assets/svg-file-format-variant.svg');
 		...
-        <DynaSvg src={svgIcon} style={{width: '150px'}} />
+		<DynaSvg src={svgIcon} style={{width: '150px'}} />
 ```
 _Awesome tiger_
 
