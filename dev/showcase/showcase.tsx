@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {DynaSvg} from "../../src/index";
+import {DynaSvg} from "../../src";
 
 import {faIcon, IShowcase} from "dyna-showcase";
 import {Logo} from "../scripts/Logo";
@@ -56,12 +56,12 @@ export default {
       slug: 'svg-icon-without-style-from-js',
       faIconName: 'flask',
       title: 'with style from props (js)',
-      description: 'svg icon rendered with styles passed props of the DynaSvg',
+      description: 'svg icon rendered with styles passed style of the DynaSvg',
       center: true,
       component: (
         <DynaSvg
           src={svgIcon}
-          width={150}
+          style={{width: '150px'}}
           onClick={() => alert('svg clicked')}
         />
       ),

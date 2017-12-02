@@ -36,7 +36,7 @@ Imports the `svg` as dom element to style the contents of or animate them.
 		...
         <DynaSvg src={svgIcon} />
 ```
-There is need to define `width` otherwise the svg will have width 0. 
+There is need to define the `width` otherwise the svg will have width 0, but don't worry. 
 
 As here we didn't define width, as fallback the `dyna-svg-defaults` class will be applied with width `63.4477px` indicating that you didn't define a style. 
 
@@ -54,6 +54,7 @@ _Much better_
 ```
 		const svgIcon = require('./assets/svg-file-format-variant.svg');
 		...
-        <DynaSvg src={svgIcon} width={100}/>
+        <DynaSvg src={svgIcon} style={{width: '150px'}} />
 ```
-_No so good idea but it is supported_
+_Awesome tiger_
+
