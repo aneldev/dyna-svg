@@ -1,22 +1,19 @@
 import * as React from "react";
 
+import "./index.less";
+
 export interface IDynaSvgProps extends React.HTMLAttributes<HTMLDivElement> {
+  className?: string;
   src: string;
-  width: number;
-  height: number;
+  width?: number;
+  height?: number;
 
   [propsName: string]: any;
 }
 
 export class DynaSvg extends React.Component<IDynaSvgProps, {}> {
-  static defaultProps: IDynaSvgProps = {
-    src: null,
-    width: 10,
-    height: 10,
-  };
-
   public render(): JSX.Element {
-    const {src, style, width, height} = this.props;
+    const {className, src, style, width, height} = this.props;
     let props = {...this.props};
     delete props.src;
     delete props.width;
@@ -24,12 +21,14 @@ export class DynaSvg extends React.Component<IDynaSvgProps, {}> {
 
     return (
       <div
+        className={className || 'dyna-svg-defaults'}
         {...props}
         style={{
           ...(style || {}),
           display: 'inline-block',
-          width: width + 'px',
-          height: height + 'px'
+          fontSize: 0,
+          width: width === undefined || null ? undefined : width + 'px',
+          height: height === undefined || null ? undefined : height + 'px'
         }}
         dangerouslySetInnerHTML={{__html: src}}
       />

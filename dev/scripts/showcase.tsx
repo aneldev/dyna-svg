@@ -5,6 +5,7 @@ import {faIcon, IShowcase} from "dyna-showcase";
 import {Logo} from "./Logo";
 
 const svgIcon: string = require('./assets/svg-file-format-variant.svg');
+const styles: any = require('./svgExampleStyles.module.less');
 
 require('./showcase.less');
 
@@ -25,17 +26,42 @@ export default {
       ),
     },
     {
-      slug: 'plain-button',
+      slug: 'svg-icon-without-style',
       faIconName: 'flask',
-      title: 'plain button',
-      description: 'The use plain button',
+      title: 'without styles',
+      description: 'svg icon rendered with default style',
       center: true,
       component: (
         <DynaSvg
-          style={{cursor:'pointer'}}
+          src={svgIcon}
+          onClick={() => alert('svg clicked')}
+        />
+      ),
+    },
+    {
+      slug: 'svg-icon-without-style-from-class',
+      faIconName: 'flask',
+      title: 'with style from class',
+      description: 'svg icon rendered with styles passed from css class',
+      center: true,
+      component: (
+        <DynaSvg
+          className={styles.svgIcon}
+          src={svgIcon}
+          onClick={() => alert('svg clicked')}
+        />
+      ),
+    },
+    {
+      slug: 'svg-icon-without-style-from-js',
+      faIconName: 'flask',
+      title: 'with style from props (js)',
+      description: 'svg icon rendered with styles passed props of the DynaSvg',
+      center: true,
+      component: (
+        <DynaSvg
           src={svgIcon}
           width={100}
-          height={100}
           onClick={() => alert('svg clicked')}
         />
       ),
