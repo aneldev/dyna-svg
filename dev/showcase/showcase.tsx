@@ -1,11 +1,11 @@
 import * as React from 'react';
 import {DynaSvg} from "../../src";
 
-import {faIcon, IShowcase} from "dyna-showcase";
-import {Logo} from "../scripts/Logo";
+import {IShowcase} from "dyna-showcase";
+import {Logo} from "../logo";
 
-const svgIcon: string = require('../scripts/assets/svg-file-format-variant.svg');
-const styles: any = require('../scripts/svgExampleStyles.module.less');
+const svgIcon: string = require('./assets/svg-file-format-variant.svg');
+const styles: any = require('./svgExampleStyles.module.less');
 
 require('./showcase.less');
 

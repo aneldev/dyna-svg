@@ -122,7 +122,7 @@ module.exports = [
     options: {
       limit: 50000,
       publicPath: '/static/',
-    },
+  },
   },
   // Alternative way to load fonts, always as links
   // {
@@ -142,5 +142,4 @@ module.exports = [
   {
     test: /\.svg$/, loader: 'svg-inline-loader'
   },
-
 ];
