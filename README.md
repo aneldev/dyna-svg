@@ -36,9 +36,7 @@ Imports the `svg` as dom element to style the contents of or animate them.
 		...
 		<DynaSvg src={svgIcon} />
 ```
-There is need to define the `width` otherwise the svg will have width 0, but don't worry. 
-
-As here we didn't define width, as fallback the `dyna-svg-defaults` class will be applied with width `63.4477px` indicating that you didn't define a style. 
+The default width is applied from the `dyna-svg-defaults` size `63.4477px` indicating that you didn't define a style. 
 
 ## Use with css class 
 ```
