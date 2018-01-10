@@ -1,6 +1,6 @@
 {
   "name": "dyna-svg",
-  "version": "2.0.3",
+  "version": "2.1.0",
   "description": "React, import svg into the dom",
   "repository": {
     "type": "git",
