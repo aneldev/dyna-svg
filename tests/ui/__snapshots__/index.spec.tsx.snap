@@ -1,13 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Home has expected content with deep render 1`] = `
-<a
-  className="dyna-button dnbtn-style-ROUNDED dnbtn-color-WHITE_BLACK dnbtn-size-MEDIUM"
-  href={null}
-  onClick={[Function]}
->
-  <button>
-    My button
-  </button>
-</a>
+<div
+  className="dyna-svg-defaults"
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": null,
+    }
+  }
+  style={
+    Object {
+      "display": "inline-block",
+      "fontSize": 0,
+      "width": "20px",
+    }
+  }
+/>
 `;

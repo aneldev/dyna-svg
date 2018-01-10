@@ -88,7 +88,7 @@
     "setupTestFrameworkScriptFile": "./tests/setup/testsetup.js",
     "automock": false,
     "collectCoverage": false,
-    "testEnvironment": "jsdom",
+    "testEnvironment": "node",
     "transform": {
       ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
