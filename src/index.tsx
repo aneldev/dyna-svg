@@ -5,19 +5,28 @@ import "./index.less";
 export interface IDynaSvgProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
   src: string;
-  [propsName: string]: any;
 }
 
 export class DynaSvg extends React.Component<IDynaSvgProps, {}> {
+  static defaultProps: IDynaSvgProps = {
+    className: '',
+    src: null,
+  };
   public render(): JSX.Element {
-    const {className, src, style} = this.props;
+    const {className: userClassName, src, style} = this.props;
     let props = {...this.props};
     delete props.className;
     delete props.src;
 
+    const className: string = [
+      'dyna-svg',
+      userClassName,
+      (userClassName || style) ? '' : 'dyna-svg-defaults',
+    ].join(' ').trim();
+
     return (
       <div
-        className={className || 'dyna-svg-defaults'}
+        className={className}
         {...props}
         style={{
           ...(style || {}),
