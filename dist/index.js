@@ -113,11 +113,20 @@ var DynaSvg = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     DynaSvg.prototype.render = function () {
-        var _a = this.props, className = _a.className, src = _a.src, style = _a.style;
+        var _a = this.props, userClassName = _a.className, src = _a.src, style = _a.style;
         var props = __assign({}, this.props);
         delete props.className;
         delete props.src;
-        return (React.createElement("div", __assign({ className: className || 'dyna-svg-defaults' }, props, { style: __assign({}, (style || {}), { display: 'inline-block', fontSize: 0 }), dangerouslySetInnerHTML: { __html: src } })));
+        var className = [
+            'dyna-svg',
+            userClassName,
+            (userClassName || style) ? '' : 'dyna-svg-defaults',
+        ].join(' ').trim();
+        return (React.createElement("div", __assign({ className: className }, props, { style: __assign({}, (style || {}), { display: 'inline-block', fontSize: 0 }), dangerouslySetInnerHTML: { __html: src } })));
+    };
+    DynaSvg.defaultProps = {
+        className: '',
+        src: null,
     };
     return DynaSvg;
 }(React.Component));
@@ -170,7 +179,7 @@ exports = module.exports = __webpack_require__(5)(false);
 
 
 // module
-exports.push([module.i, ".dyna-svg-defaults {\n  width: 63.4477px;\n}\n", ""]);
+exports.push([module.i, ".dyna-svg svg {\n  width: inherit;\n  height: inherit;\n}\n.dyna-svg-defaults {\n  width: 63.4477px;\n}\n", ""]);
 
 // exports
 
