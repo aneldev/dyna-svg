@@ -179,7 +179,7 @@ exports = module.exports = __webpack_require__(5)(false);
 
 
 // module
-exports.push([module.i, ".dyna-svg svg {\n  width: inherit;\n  height: inherit;\n}\n.dyna-svg-defaults {\n  width: 63.4477px;\n}\n", ""]);
+exports.push([module.i, ".dyna-svg svg {\n  width: inherit;\n  height: inherit;\n  height: auto;\n}\n.dyna-svg-defaults {\n  width: 63.4477px;\n}\n", ""]);
 
 // exports
 
